@@ -17,4 +17,20 @@ public class CalculadoraController : Controller
     {
         return View();
     }
+    [HttpPost]
+    public IActionResult calcular(Calculadora obCalculadora){
+        if("+".Equals(obCalculadora.Accion)){
+            obCalculadora.Respuesta = obCalculadora.Operador1 + obCalculadora.Operador2;
+        }
+         if("-".Equals(obCalculadora.Accion)){
+            obCalculadora.Respuesta = obCalculadora.Operador1 - obCalculadora.Operador2;
+        }
+         if("*".Equals(obCalculadora.Accion)){
+            obCalculadora.Respuesta = obCalculadora.Operador1 * obCalculadora.Operador2;
+        }
+         if("/".Equals(obCalculadora.Accion)){
+            obCalculadora.Respuesta = obCalculadora.Operador1 / obCalculadora.Operador2;
+        }
+        return View("Index", obCalculadora);
+    }
 }
