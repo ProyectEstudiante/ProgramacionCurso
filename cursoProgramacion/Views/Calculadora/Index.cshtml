@@ -1,7 +1,29 @@
+@model cursoProgramacion.Models.Calculadora;//a;adiendo controles 
 @{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Calculadora</h1>
+    <form asp-controller="Calculadora" asp-action="calcular">
+        <label>Calculadora</label>
+        <br>
+        <label>Operador 1</label>
+        <input asp-for="Operador1">
+        <br>
+        <label>Operador 2</label>
+        <input asp-for="Operador2">
+        <br>
+        <label>Elija la accion</label>
+        <select asp-for="Accion">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <br>
+        <input type="submit" value="calcular">
+    </form>
+    <td>@Html.DisplayNameFor(model => model.Respuesta)</td>
+    <td>@Html.DisplayNameFor(model => model.Respuesta)</td>
 </div>
