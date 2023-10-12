@@ -17,4 +17,8 @@ public class ContactoController : Controller
     {
         return View();
     }
+    public IActionResult Registrar(Contacto objcontacto){
+        objcontacto.Response = "Grasias estaremos en contacto";
+        return View("Index", objcontacto);
+    }
 }
