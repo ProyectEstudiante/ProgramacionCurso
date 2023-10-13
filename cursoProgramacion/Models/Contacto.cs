@@ -21,7 +21,7 @@ namespace cursoProgramacion.Models
         [Display(Name="Telefono")]
         public int Number { get; set; }
         [Display(Name="Curso")]
-        public int Course { get; set; }
+        public string Course { get; set; }
         [Display(Name="Titulo")]
         public string? Title { get; set; }
         [Display(Name="Mensage")]
