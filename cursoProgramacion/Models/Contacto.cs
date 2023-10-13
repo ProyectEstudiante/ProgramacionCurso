@@ -8,10 +8,10 @@ namespace cursoProgramacion.Models
 {
     public class Contacto
     {
-        [Require(ErrorMessage="Campo Nombre incompleto")]
+        [Required(ErrorMessage="Campo Nombre incompleto")]
         [Display(Name="Nombre")]
         public string? Name { get; set; }
-        [Require(ErrorMessage="Campo Apellido incompleto")]
+        [Required(ErrorMessage="Campo Apellido incompleto")]
         [Display(Name="Apellido")]
         public string? Lastname { get; set; }
 
@@ -21,7 +21,7 @@ namespace cursoProgramacion.Models
         [Display(Name="Telefono")]
         public int Number { get; set; }
         [Display(Name="Curso")]
-        public string Course { get; set; }
+        public string? Course { get; set; }
         [Display(Name="Titulo")]
         public string? Title { get; set; }
         [Display(Name="Mensage")]

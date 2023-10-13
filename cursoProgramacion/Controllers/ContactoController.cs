@@ -20,7 +20,7 @@ public class ContactoController : Controller
     public IActionResult Registrar(Contacto objcontacto){
         if (ModelState.IsValid)
         {
-            objcontacto.Response="Gracias, lo contactaremos"   
+            objcontacto.Response="Gracias, lo contactaremos";   
         }
         return View("Index", objcontacto);
     }
