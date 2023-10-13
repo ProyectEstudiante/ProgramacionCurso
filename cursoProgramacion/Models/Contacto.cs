@@ -16,6 +16,8 @@ namespace cursoProgramacion.Models
         public string? Email { get; set; }
         [Display(Name="Telefono")]
         public int Number { get; set; }
+        [Display(Name="Curso")]
+        public int Course { get; set; }
         [Display(Name="Titulo")]
         public string? Title { get; set; }
         [Display(Name="Mensage")]
